@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Vue SFC</title>
+    <link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css" />
+    <style>
+      html {
+        background-color: #2d2d2d;
+        color: white;
+      }
+      #app {
+        color: white;
+        height: 100vh;
+        width: 750px;
+      }
+      .code {
+        padding: 5% 0;
+        background-color: #1c1c1c;
+        color: white;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <div class="body">
+        <header>
+          <h2>{{appName}}</h2>
+          <h5>A GraphQL API root handler</h5>
+        </header>
+        <ul>
+          <li v-for="(item, i) in listItem" :key="i">{{item}}</li>
+        </ul>
+        <code class="code">
+          <pre>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque nihil ratione fugiat vero illo alias, eveniet excepturi aspernatur.
+
+voluptatem dolor delectusaccusantium molestias? Necessi tatibus nulla quasi recusandae dolorem at deserunt?</pre
+          >
+        </code>
+      </div>
+    </section>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            appName: 'GraphQL API',
+            listItem: ['one', 'two', 'three', 'four', 'five'],
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
